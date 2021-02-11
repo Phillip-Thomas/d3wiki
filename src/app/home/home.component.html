@@ -1,0 +1,25 @@
+<div class="grid-container wiki">
+    <div class="grid-x">
+      <div class="small-12 cell">
+        <div class="pagemain" style="margin-top: 100px;">
+            <h5></h5>  
+            <!-- <br> -->
+            <div style="margin:20px; margin-top: 100px;">
+            <div *ngIf="youtube">
+              <iframe width="100%" height="auto" id="video" [src]="youtube | safe: 'resourceUrl'">
+              </iframe>
+            </div>
+            <markdown [data]="content" class="info" style="width:75%"></markdown>
+            </div>
+            <!-- <div class="manage-post" style="width: 50px; left: 50%;">  -->
+            <!-- <div class="manage-post" *ngIf="isAuthenticated"> -->
+              <button *ngIf="!locked" class="button" [routerLink]="['/edit', slug]"  style="left: 50%;
+              position: relative;
+              transform: translateX(-50%);">Edit</button>
+            <!-- </div> -->
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  

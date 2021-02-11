@@ -1,0 +1,82 @@
+input {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+
+  label {
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    transform: translateX(-50%);
+    font: 300 16px/1.5 'Pacifico', Helvetica, sans-serif;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+    color: black;
+    margin: 0;
+    margin: 20px
+  }
+
+  .ck.ck-editor {
+    width: relative;
+    margin: 20px;}
+  
+  textarea {
+    height: 50vh;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+  }
+  
+  .manage-post {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      background-color: #4b4b4b;;
+      position: absolute;
+      width: 80%;
+      transform: translate(10%, 0%);
+      transform: translateX(-50%);
+        width: 50%;
+        left: 50%;
+        width: calc(100% - 160px);
+    }
+  
+  h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      color: #10161A;
+      font:  400 80px/1.5 'Pacifico', Helvetica, sans-serif;
+      text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  }
+  
+  h1 {
+      font:  400 80px/1.5 'Pacifico', Helvetica, sans-serif;
+      text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  }
+  
+  h2 {
+      font-size: 28px;
+  }
+  
+  h3 {
+      font-size: 21px;
+  }
+  
+  h4 {
+      font-size: 18px;
+  }
+  
+  h5 {
+      font-family: 'Varela Round', copperplate;
+      font-size: 16px;
+  }
+  
+  h6 {
+      font-size: 80px;
+  }

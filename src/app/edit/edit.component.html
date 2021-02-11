@@ -1,0 +1,27 @@
+<div class="grid-container wiki">
+  <div class="grid-x">
+    <div class="small-12 cell">
+      <form [formGroup]="editPageForm" (ngSubmit)="savePage()" *ngIf="!pending" style="margin-top: 80px;">
+        <!-- <label>
+          <h5> Page Content</h5> -->
+        <!-- </label> -->
+        <label class="label" > Youtube URL :
+          <input type="text" placeholder="youtube url" value="youtube" formControlName="youtube"  style="">
+        </label>
+        <!-- <label class="label" *ngIf="newPage">Position
+          <input type="text" placeholder="Closed Guard" value="slug" formControlName="slug">
+        </label><br> -->
+        <label class="label" > Text Information :
+        </label>
+        <!-- <textarea id="editor" placeholder="Page Content" formControlName="content"></textarea> -->
+        <div style="margin:20px; margin-top:0px;">
+        <ckeditor  formControlName="content" [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+        </div>
+        <div class="manage-post" style=""> 
+        <button class="button">Save</button>
+        <button class="button" routerLink="/ {{ slug }}">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

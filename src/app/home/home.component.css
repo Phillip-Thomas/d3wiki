@@ -1,0 +1,36 @@
+.manage-post {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #fafafa;
+  }
+
+h5 {
+  text-align: center;
+  position: relative;
+  font-size: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 300 28px/1.5 'Pacifico', Helvetica, sans-serif;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  color: white;
+  margin: 0;
+}
+
+hr.solid {
+  border-top: 2px solid black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.info {
+  font: 12px/1.5 'Pacifico', Helvetica, sans-serif;
+  color: white;
+}
+
+p {
+  border-style: solid;
+  border-color: white;
+  padding: 10px;
+  border-width: 1px;
+}
