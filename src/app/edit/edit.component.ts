@@ -15,6 +15,7 @@ export class EditComponent implements OnInit {
   newPage: boolean = true;
   pending: boolean = true;
   slug: string;
+  page: any
 
   constructor(private formBuilder: FormBuilder,
               private db: AngularFirestore,

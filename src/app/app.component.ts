@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-// import { OktaAuthService } from '@okta/okta-angular';
+import { OktaAuthService } from '@okta/okta-angular';
 import * as d3 from "d3";
 
 interface HierarchyDatum {
@@ -84,7 +84,7 @@ const data: HierarchyDatum = {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'd3tree';
+  title = 'WikiClient';
   parentData: any
   @ViewChild('chart', { static: true }) private chartContainer: ElementRef;
   
@@ -122,6 +122,8 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.renderTreeChart();
   }
+
+  
 
   renderTreeChart() {
 
@@ -278,6 +280,7 @@ export class AppComponent implements OnInit {
                   ${d.y} ${d.x}`;
       return path;
     }
+    
   }
 
 }

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    background-color: #fafafa;
+    background-color: #887575;
   }
 
 h5 {
@@ -13,7 +13,7 @@ h5 {
   transform: translateX(-50%);
   font: 300 28px/1.5 'Pacifico', Helvetica, sans-serif;
   text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
-  color: white;
+  color: black;
   margin: 0;
 }
 
@@ -25,12 +25,18 @@ hr.solid {
 
 .info {
   font: 12px/1.5 'Pacifico', Helvetica, sans-serif;
-  color: white;
+  color: black;
 }
 
 p {
   border-style: solid;
-  border-color: white;
+  border-color: black;
   padding: 10px;
   border-width: 1px;
+}
+
+.pagemain {
+  width: 50%;
+  right:0px;
+  position: absolute;
 }

@@ -25,12 +25,14 @@ const config = {
 };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC29O-PoO-45wzxoyMU_oU9DYyjb0GC6JU",
-  authDomain: "flowrolljj.firebaseapp.com",
-  databaseURL: "https://flowrolljj.firebaseio.com",
-  projectId: "flowrolljj",
-  storageBucket: "flowrolljj.appspot.com",
-  messagingSenderId: "157974903699"
+  apiKey: "AIzaSyCcz5Zpassrkt9_xQAdbuF3jMG6dd5jWGk",
+  authDomain: "frjj2-0.firebaseapp.com",
+  databaseURL: "https://frjj2-0-default-rtdb.firebaseio.com",
+  projectId: "frjj2-0",
+  storageBucket: "frjj2-0.appspot.com",
+  messagingSenderId: "272744452670",
+  appId: "1:272744452670:web:62d21e3b9c4d3ddee5b76f",
+  measurementId: "G-BYQTQ9BB29" 
 };
 
 @NgModule({

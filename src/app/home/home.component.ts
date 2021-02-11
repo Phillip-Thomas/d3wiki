@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   modified: number;
   locked: boolean;
   youtube: string;
+  page: any
 
   subs: Subscription;
 
@@ -32,11 +33,6 @@ export class HomeComponent implements OnInit {
     });
 
     this.isAuthenticated = true
-    // // this.isAuthenticated = await this.oktaAuth.isAuthenticated();
-    // this.oktaAuth.$authenticationState.subscribe(
-    //   (isAuthenticated: boolean)  => this.isAuthenticated = true
-      // (isAuthenticated: boolean)  => this.isAuthenticated = isAuthenticated
-    // );
   }
 
   getId(url) {
@@ -59,13 +55,14 @@ export class HomeComponent implements OnInit {
       if (!page) {
         this.content = '### Nobody has contributed to this position/technique yet! Be the first and add a youtube video or description.';
         this.slug = slug;
-      } else {
+      }
+      if (page) {
         this.slug = slug;
-        // this.content = page.content;
-        // this.created = page.created;
-        // this.modified = page.modified;
-        // this.youtube = 'https://www.youtube.com/embed/' + this.getId(page.youtube);
-        // console.log(page);
+        this.content = page.content;
+        this.created = page.created;
+        this.modified = page.modified;
+        this.youtube = 'https://www.youtube.com/embed/' + this.getId(page.youtube);
+        console.log(page);
       }
     });
     if (slug == 'home' || slug=='library'){

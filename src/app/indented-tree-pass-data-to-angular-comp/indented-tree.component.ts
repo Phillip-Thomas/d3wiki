@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as d3 from "d3";
 import * as dataJson from '../data_.json';
 
@@ -37,7 +38,8 @@ export class IndentedTreeComponentD3ToAngComp implements OnInit, AfterViewInit {
   nodes: any[];
   i = 0;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {}
 
@@ -46,6 +48,7 @@ export class IndentedTreeComponentD3ToAngComp implements OnInit, AfterViewInit {
   }
   getSelectedItem(d) {
     this.name = d.data.name;
+    this.router.navigate(['/home', d.data.name])
     this.redirect.emit(this.name)
   }
 
