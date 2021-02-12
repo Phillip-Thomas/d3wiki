@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { OktaAuthService } from '@okta/okta-angular';
+import { Router, ActivatedRoute, NavigationEnd, NavigationStart } from '@angular/router';
 import * as d3 from "d3";
 
 interface HierarchyDatum {
@@ -86,6 +86,7 @@ const data: HierarchyDatum = {
 export class AppComponent implements OnInit {
   title = 'WikiClient';
   parentData: any
+  needTree: any
   @ViewChild('chart', { static: true }) private chartContainer: ElementRef;
   
 
@@ -117,7 +118,18 @@ export class AppComponent implements OnInit {
   previousClickedDomNode: any;
   links: any;
 
-  constructor() { }
+  constructor(private router: Router,
+    private route: ActivatedRoute) {    
+      this.router.events.subscribe((e) => {
+        if (e instanceof NavigationEnd) {
+          console.log('navigation ended. route was' + e.url )
+          if (e.url != '/login') {
+              console.log('/login' == e.url)
+              this.needTree = true
+          } else this.needTree = false
+        }
+      });
+     }
 
   ngOnInit() {
     this.renderTreeChart();
@@ -126,7 +138,6 @@ export class AppComponent implements OnInit {
   
 
   renderTreeChart() {
-
     let element: any = this.chartContainer.nativeElement;
     this.width = element.offsetWidth - this.margin.left - this.margin.right;
     this.height = element.offsetHeight - this.margin.top - this.margin.bottom;

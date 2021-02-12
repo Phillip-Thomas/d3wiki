@@ -1,6 +1,5 @@
 <bs-navbar></bs-navbar>
 <div class="content" role="main">
-  <!-- <app-sidebar [data]="parentData"></app-sidebar>  -->
+  <app-indented-tree-d3-to-ang-comp *ngIf="needTree"></app-indented-tree-d3-to-ang-comp>
   <router-outlet></router-outlet>
-
 </div>

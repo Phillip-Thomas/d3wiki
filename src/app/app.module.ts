@@ -24,11 +24,6 @@ import { MainAppComponent } from './main-app/main-app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 import { AuthService } from './auth.service';
 
-const config = {
-  issuer: 'https://dev-637635.okta.com',
-  redirectUri: window.location.origin + '/implicit/callback',
-  clientId: '0oa27wjykdKiQYlEO357'
-};
 
 const firebaseConfig = {
   apiKey: "AIzaSyCcz5Zpassrkt9_xQAdbuF3jMG6dd5jWGk",

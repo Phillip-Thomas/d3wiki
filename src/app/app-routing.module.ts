@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { MainAppComponent } from './main-app/main-app.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home/', pathMatch: 'full'},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {
     path: 'home/:slug',
     component: HomeComponent

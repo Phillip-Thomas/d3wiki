@@ -12,6 +12,7 @@ input {
     text-align: center;
     position: relative;
     font-size: 50px;
+    left: 50%;
     transform: translateX(-50%);
     font: 300 16px/1.5 'Pacifico', Helvetica, sans-serif;
     text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
@@ -36,9 +37,9 @@ input {
       display: flex;
       justify-content: space-between;
       padding: 0.5rem 1rem;
-      background-color: #4b4b4b;;
+      background-color:lightgray;
       position: absolute;
-      width: 80%;
+      width: 50%;
       transform: translate(10%, 0%);
       transform: translateX(-50%);
         width: 50%;
@@ -79,4 +80,12 @@ input {
   
   h6 {
       font-size: 80px;
+  }
+
+  .editor {
+    width: 51%;
+    position: absolute;
+    right: 0px;
+    height: calc(100vh - 54px);
+    background-color: lightgray;
   }

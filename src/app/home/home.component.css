@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    background-color: #887575;
+    background-color: white;
   }
 
 h5 {
@@ -23,10 +23,6 @@ hr.solid {
   border-width: 1px;
 }
 
-.info {
-  font: 12px/1.5 'Pacifico', Helvetica, sans-serif;
-  color: black;
-}
 
 p {
   border-style: solid;
@@ -36,7 +32,25 @@ p {
 }
 
 .pagemain {
-  width: 50%;
+  width: 51%;
   right:0px;
   position: absolute;
+  height: calc(100vh - 56px);
+  background-color: black;
+  top: 0px;
+}
+
+.homeBody {
+  width: 100%;
+  background-color: lightgray;
+  height: 100%;
+}
+
+.info h3 {
+  left: 50%;
+  transform: translateX(-50%);
+  font: 300 12px/1.5 'Pacifico', Helvetica, sans-serif;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+  color: black;
+  margin: 0;
 }
