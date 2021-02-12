@@ -17,6 +17,9 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
+import { LoginComponent } from './login/login.component';
+import { MainAppComponent } from './main-app/main-app.component';
 
 const config = {
   issuer: 'https://dev-637635.okta.com',
@@ -37,13 +40,16 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
+    BsNavbarComponent,
     AppComponent,
     HomeComponent,
     EditComponent,
     IndentedTreeComponent,
     IndentedTreeLeftTopComponent,
     IndentedTreeComponentD3ToAngComp,
-    SidebarComponent
+    SidebarComponent,
+    LoginComponent,
+    MainAppComponent
   ],
   imports: [
     FormsModule,
