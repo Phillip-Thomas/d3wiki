@@ -20,6 +20,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { LoginComponent } from './login/login.component';
 import { MainAppComponent } from './main-app/main-app.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 
 const config = {
   issuer: 'https://dev-637635.okta.com',
@@ -63,7 +64,8 @@ const firebaseConfig = {
     AngularFireModule,
     MarkdownModule.forRoot(),
     SafePipeModule,
-    CKEditorModule
+    CKEditorModule,
+    NgbModule
   ],
   // providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   providers: [],
