@@ -51,22 +51,24 @@ export class HomeComponent implements OnInit {
 
     const doc = this.db.collection('pages').doc(slug).get();
     this.subs = doc.subscribe((snapshot) => {
-      const page = snapshot.data();
-      if (!page) {
+      this.page = snapshot.data();
+      if (!this.page) {
         this.content = '### Nobody has contributed to this position/technique yet! Be the first and add a youtube video or description.';
         this.slug = slug;
       }
-      if (page) {
+      if (this.page) {
         this.slug = slug;
-        this.content = page.content;
-        this.created = page.created;
-        this.modified = page.modified;
-        this.youtube = 'https://www.youtube.com/embed/' + this.getId(page.youtube);
-        console.log(page);
+        this.content = this.page.content;
+        this.created = this.page.created;
+        this.modified = this.page.modified;
+        if (this.page.youtube) {
+        this.youtube = 'https://www.youtube.com/embed/' + this.getId(this.page.youtube);
+        } else this.youtube = null
       }
     });
     if (slug == 'home' || slug=='library'){
       this.locked = true
     }
+    else this.locked = false
   }
 }

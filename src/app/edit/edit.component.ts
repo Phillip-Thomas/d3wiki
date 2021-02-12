@@ -46,13 +46,13 @@ export class EditComponent implements OnInit {
   initEditPage(slug) {
     const doc = this.db.collection('pages').doc(slug).get();
     const subs = doc.subscribe((snapshot) => {
-      const page = snapshot.data();
-      if (!page) {
+      this.page = snapshot.data();
+      if (!this.page) {
         this.initNewPage(slug);
       } else {
         this.editPageForm = this.formBuilder.group({
-          content: [page.content, Validators.required],
-          youtube: [page.youtube, Validators.required]
+          content: [this.page.content, Validators.required],
+          youtube: [this.page.youtube, Validators.required]
         });
         this.newPage = false;
         this.pending = false;
