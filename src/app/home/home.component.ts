@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit {
       if (!this.page) {
         this.content = '### Nobody has contributed to this position/technique yet! Be the first and add a youtube video or description.';
         this.slug = slug;
+        this.youtube = null
       }
       if (this.page) {
         this.slug = slug;
@@ -63,7 +64,7 @@ export class HomeComponent implements OnInit {
         this.modified = this.page.modified;
         if (this.page.youtube) {
         this.youtube = 'https://www.youtube.com/embed/' + this.getId(this.page.youtube);
-        } else this.youtube = null
+        } else {this.youtube = null}
       }
     });
     if (slug == 'home' || slug=='library'){

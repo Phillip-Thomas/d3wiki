@@ -1,4 +1,4 @@
-<app-indented-tree-d3-to-ang-comp (redirect)="parentData=$event"></app-indented-tree-d3-to-ang-comp>
+<app-indented-tree-d3-to-ang-comp ></app-indented-tree-d3-to-ang-comp>
 <div class="grid-container wiki">
     <div class="grid-x">
       <div class="small-12 cell">
@@ -6,6 +6,7 @@
             <h5></h5>  
             <!-- <br> -->
             <div style="margin:20px; margin-top: 100px;">
+              {{ slug }}
             <div *ngIf="youtube">
               <iframe width="100%" height="auto" id="video" [src]="youtube | safe: 'resourceUrl'">
               </iframe>
