@@ -1,9 +1,9 @@
 // import { ShoppingCart } from '../shared/models/shopping-cart';
-import { Observable } from 'rxjs';
 // import { ShoppingCartService } from '../shared/services/shopping-cart.service';
 // import { AppUser } from '../shared/models/app-user';
 // import { AuthService } from '../shared/services/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'bs-navbar',
@@ -16,7 +16,8 @@ export class BsNavbarComponent implements OnInit {
 
   // constructor(private auth: AuthService, private shoppingCartService: ShoppingCartService) { 
   // }
-  constructor() {}
+  constructor(public auth: AuthService) {
+  }
 
   async ngOnInit() { 
     // this.auth.appUser$.subscribe(appUser => this.appUser = appUser);
@@ -24,7 +25,7 @@ export class BsNavbarComponent implements OnInit {
   }
 
   logout() {
-    // this.auth.logout();
+    this.auth.logout();
   }
 
 }

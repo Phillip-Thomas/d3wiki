@@ -13,6 +13,7 @@ import { OktaAuthModule } from '@okta/okta-angular';
 import { AuthInterceptor } from './shared/okta/auth.interceptor';
 import { AngularFireModule} from '@angular/fire'
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth'
 import { MarkdownModule } from 'ngx-markdown';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
@@ -21,6 +22,7 @@ import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { LoginComponent } from './login/login.component';
 import { MainAppComponent } from './main-app/main-app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+import { AuthService } from './auth.service';
 
 const config = {
   issuer: 'https://dev-637635.okta.com',
@@ -58,8 +60,9 @@ const firebaseConfig = {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFirestoreModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     // OktaAuthModule.initAuth(config),
     AngularFireModule,
     MarkdownModule.forRoot(),
@@ -68,7 +71,9 @@ const firebaseConfig = {
     NgbModule
   ],
   // providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
